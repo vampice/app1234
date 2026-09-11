@@ -78,7 +78,7 @@
         <Label x:Name="SelectedHex" Text="" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,10,0,0" />
 
         <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
-          <Button x:Name="RandomizeBtn" Text="Random" Clicked="OnRandomizeClicked" />
+          <Button x:Name="RandomizeBtn" Text="Randomize" Clicked="OnRandomizeClicked" />
         </HorizontalStackLayout>
 
       </VerticalStackLayout>
