@@ -20,6 +20,8 @@
     </TabBar>
 
     <MenuItem Text="Home" Clicked="OnHomeClicked" />
+    <MenuItem Text="Character" Clicked="Character_Clicked" />
     <MenuItem Text="About" Clicked="OnAboutClicked" />
+    
 
 </Shell>

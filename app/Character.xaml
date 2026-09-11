@@ -1,0 +1,127 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Character"
+             Title="Character">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="15">
+
+            <Label
+                Text="🎲 CHARACTER RANDOMIZER"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Border
+                Padding="20"
+               >
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="ชื่อ"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="NameLabel"
+                        Text="-"
+                        FontSize="22" />
+
+                    <Label
+                        Text="อาชีพ"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="ClassLabel"
+                        Text="-"
+                        FontSize="20" />
+
+                    <Label
+                        Text="สายการเล่น"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="StyleLabel"
+                        Text="-"
+                        FontSize="20" />
+
+                    <BoxView HeightRequest="1" />
+
+                    <Label
+                        Text="STATS"
+                        FontSize="20"
+                        FontAttributes="Bold" />
+
+                    <Grid
+                        ColumnDefinitions="*,Auto"
+                        RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                        RowSpacing="8">
+
+                        <Label Text="STR" Grid.Row="0" />
+                        <Label x:Name="STRLabel"
+                               Text="0"
+                               Grid.Row="0"
+                               Grid.Column="1" />
+
+                        <Label Text="DEX" Grid.Row="1" />
+                        <Label x:Name="DEXLabel"
+                               Text="0"
+                               Grid.Row="1"
+                               Grid.Column="1" />
+
+                        <Label Text="END" Grid.Row="2" />
+                        <Label x:Name="ENDLabel"
+                               Text="0"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+
+                        <Label Text="INT" Grid.Row="3" />
+                        <Label x:Name="INTLabel"
+                               Text="0"
+                               Grid.Row="3"
+                               Grid.Column="1" />
+
+                        <Label Text="CHA" Grid.Row="4" />
+                        <Label x:Name="CHALabel"
+                               Text="0"
+                               Grid.Row="4"
+                               Grid.Column="1" />
+
+                    </Grid>
+
+                    <BoxView HeightRequest="1" />
+
+                    <Label
+                        Text="อาวุธ"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="WeaponLabel"
+                        Text="-"
+                        FontSize="18" />
+
+                    <Label
+                        Text="สกิล"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="SkillLabel"
+                        Text="-"
+                        FontSize="18" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Button
+                Text="🎲 สุ่มตัวละคร"
+                FontSize="20"
+                HeightRequest="60"
+                Clicked="Character_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

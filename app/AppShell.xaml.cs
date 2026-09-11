@@ -11,13 +11,19 @@
         private async void OnHomeClicked(object? sender, EventArgs e)
         {
             FlyoutIsPresented = false;
-            await GoToAsync("//MainPage");
+            await GoToAsync(nameof(MainPage));
         }
 
         private async void OnAboutClicked(object? sender, EventArgs e)
         {
             FlyoutIsPresented = false;
             await GoToAsync(nameof(AboutPage));
+        }
+
+        private async void Character_Clicked(object sender, EventArgs e)
+        {
+            FlyoutIsPresented = false;
+            await GoToAsync(nameof(Character));
         }
     }
 }
