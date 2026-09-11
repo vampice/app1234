@@ -19,11 +19,7 @@
             Route="HistoryPage" />
     </TabBar>
 
-    <FlyoutItem Title="About">
-        <ShellContent
-            Title="About"
-            ContentTemplate="{DataTemplate local:AboutPage}"
-            Route="AboutPage" />
-    </FlyoutItem>
+    <MenuItem Text="Home" Clicked="OnHomeClicked" />
+    <MenuItem Text="About" Clicked="OnAboutClicked" />
 
 </Shell>
