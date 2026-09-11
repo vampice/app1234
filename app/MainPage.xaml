@@ -22,23 +22,51 @@
             <RowDefinition Height="*" />
           </Grid.RowDefinitions>
 
-          <Border Grid.Row="0" Padding="0" BackgroundColor="Transparent">
+          <Border 
+              Grid.Row="0" 
+              Padding="0" 
+              BackgroundColor="Transparent">
             <Grid>
-              <BoxView x:Name="Swatch1" WidthRequest="400" HeightRequest="400" Color="Transparent" />
-              <Label x:Name="Swatch1Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+              <BoxView 
+                  x:Name="Swatch1" 
+                  WidthRequest="400"
+                  HeightRequest="400" 
+                  Color="Transparent" />
+              <Label 
+                  x:Name="Swatch1Label" 
+                  Text="" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center" 
+                  FontAttributes="Bold" />
             </Grid>
             <Border.GestureRecognizers>
-              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch1}" />
+              <TapGestureRecognizer 
+                  Tapped="OnSwatchTapped" 
+                  CommandParameter="{x:Reference Swatch1}" />
             </Border.GestureRecognizers>
           </Border>
 
-          <Border Grid.Row="1" Padding="0" BackgroundColor="Transparent">
+          <Border 
+              Grid.Row="1" 
+              Padding="0" 
+              BackgroundColor="Transparent">
             <Grid>
-              <BoxView x:Name="Swatch2" HorizontalOptions="Fill" VerticalOptions="Fill" Color="#FF89FF84" />
-              <Label x:Name="Swatch2Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+              <BoxView
+                  x:Name="Swatch2" 
+                  HorizontalOptions="Fill" 
+                  VerticalOptions="Fill" 
+                  Color="Transparent" />
+              <Label 
+                  x:Name="Swatch2Label" 
+                  Text="" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center" 
+                  FontAttributes="Bold" />
             </Grid>
             <Border.GestureRecognizers>
-              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch2}" />
+              <TapGestureRecognizer 
+                  Tapped="OnSwatchTapped" 
+                  CommandParameter="{x:Reference Swatch2}" />
             </Border.GestureRecognizers>
           </Border>
 
@@ -74,7 +102,7 @@
 
         </Grid>
 
-        <!-- Selected hex display -->
+       
         <Label x:Name="SelectedHex" Text="" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,10,0,0" />
 
         <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">

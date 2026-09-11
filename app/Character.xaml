@@ -1,7 +1,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="app.Character"
-             Title="Character">
+             Title="Character Status">
 
     <ScrollView>
         <VerticalStackLayout
@@ -9,7 +9,7 @@
             Spacing="15">
 
             <Label
-                Text="🎲 CHARACTER RANDOMIZER"
+                Text="Status"
                 FontSize="28"
                 FontAttributes="Bold"
                 HorizontalOptions="Center" />
@@ -19,6 +19,22 @@
                >
 
                 <VerticalStackLayout Spacing="12">
+                    <Label
+                        Text="จำนวนแต้มที่ต้องการ"
+                        FontAttributes="Bold"
+                        FontSize="18" />
+
+                                        <Entry
+                        x:Name="PointEntry"
+                        Text="40"
+                        Keyboard="Numeric"
+                        Placeholder="เช่น 40" />
+
+                                    <Label
+                        x:Name="TotalPointLabel"
+                        Text="แต้มคงเหลือ: 40"
+                        FontSize="18"
+                        HorizontalOptions="Center" />           
 
                     <Label
                         Text="ชื่อ"
@@ -116,7 +132,7 @@
             </Border>
 
             <Button
-                Text="🎲 สุ่มตัวละคร"
+                Text="สุ่มตัวละคร"
                 FontSize="20"
                 HeightRequest="60"
                 Clicked="Character_Clicked" />

@@ -7,17 +7,19 @@
     Title="app"
     FlyoutBehavior="Flyout">
 
+    <!-- TabBar only contains pages that should show the tab UI (Home) -->
     <TabBar Title="Color Tools">
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
-
-        <ShellContent
-            Title="History"
-            ContentTemplate="{DataTemplate local:HistoryPage}"
-            Route="HistoryPage" />
     </TabBar>
+
+    <!-- Other pages are top-level ShellContent so they don't show the TabBar UI -->
+    <ShellContent
+        Title="History"
+        ContentTemplate="{DataTemplate local:HistoryPage}"
+        Route="HistoryPage" />
 
     <MenuItem Text="Home" Clicked="OnHomeClicked" />
     <MenuItem Text="Character" Clicked="Character_Clicked" />

@@ -1,18 +1,496 @@
-<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="app.AboutPage"
-             Title="About">
+             Title="Appearance">
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="16">
-            <Label Text="About"
+            <Label Text="Appearance"
                    FontSize="32"
                    FontAttributes="Bold" />
-            <Label Text="Random Color"
-                   FontSize="22"
-                   FontAttributes="Bold" />
-            <Label Text="Create and explore random color palettes from the home page."
-                   FontSize="16" />
+
+            <VerticalStackLayout Spacing="3">
+
+                <Label
+                    Text="✦ CHARACTER CREATOR"
+                    TextColor="#C9A7FF"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    CharacterSpacing="2"/>
+
+                <Label
+                    Text="Appearance"
+                    TextColor="White"
+                    FontSize="32"
+                    FontAttributes="Bold"/>
+
+                <Label
+                    Text="ปรับแต่งรูปลักษณ์ของตัวละคร"
+                    TextColor="#92949F"
+                    FontSize="14"/>
+
+            </VerticalStackLayout>
+
+
+            <!-- CHARACTER PREVIEW -->
+
+            <Border
+                Stroke="#343642"
+                StrokeThickness="1"
+                BackgroundColor="#181A21"
+                StrokeShape="RoundRectangle 22"
+                Padding="0">
+
+                <Grid
+                    HeightRequest="250">
+
+                    <!-- Decorative background -->
+
+                    <Border
+                        BackgroundColor="#20202B"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 22"/>
+
+                    <VerticalStackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="8">
+
+                        <Label
+                            Text="👤"
+                            FontSize="90"
+                            HorizontalOptions="Center"/>
+
+                        <Label
+                            Text="CHARACTER PREVIEW"
+                            TextColor="#777A88"
+                            FontSize="11"
+                            CharacterSpacing="2"
+                            HorizontalOptions="Center"/>
+
+                    </VerticalStackLayout>
+
+                </Grid>
+
+            </Border>
+
+
+            <!-- BASIC -->
+
+            <Label
+                Text="BASIC"
+                TextColor="#C9A7FF"
+                FontSize="13"
+                FontAttributes="Bold"
+                CharacterSpacing="2"
+                Margin="2,5,0,0"/>
+
+            <Border
+                BackgroundColor="#181A21"
+                Stroke="#2E303A"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 18"
+                Padding="16">
+
+                <VerticalStackLayout Spacing="3">
+
+                    <!-- Gender -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto"
+                        Padding="0,10">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="เพศ"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Gender"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="GenderPicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ชาย</x:String>
+                                <x:String>หญิง</x:String>
+                                <x:String>ไม่ระบุ</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Race -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto"
+                        Padding="0,10">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="เผ่าพันธุ์"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Race"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="RacePicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>มนุษย์</x:String>
+                                <x:String>เอลฟ์</x:String>
+                                <x:String>คนแคระ</x:String>
+                                <x:String>ปีศาจ</x:String>
+                                <x:String>อสูร</x:String>
+                                <x:String>แวมไพร์</x:String>
+                                <x:String>มนุษย์สัตว์</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Hair -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto"
+                        Padding="0,10">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="สีผม"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Hair Color"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="HairPicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ดำ</x:String>
+                                <x:String>ขาว</x:String>
+                                <x:String>น้ำตาล</x:String>
+                                <x:String>แดง</x:String>
+                                <x:String>ฟ้า</x:String>
+                                <x:String>เขียว</x:String>
+                                <x:String>ม่วง</x:String>
+                                <x:String>เงิน</x:String>
+                                <x:String>ทอง</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Eyes -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto"
+                        Padding="0,10">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="สีตา"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Eye Color"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="EyePicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ดำ</x:String>
+                                <x:String>น้ำตาล</x:String>
+                                <x:String>แดง</x:String>
+                                <x:String>ฟ้า</x:String>
+                                <x:String>เขียว</x:String>
+                                <x:String>ม่วง</x:String>
+                                <x:String>ทอง</x:String>
+                                <x:String>เงิน</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <!-- CHARACTER -->
+
+            <Label
+                Text="CHARACTER"
+                TextColor="#C9A7FF"
+                FontSize="13"
+                FontAttributes="Bold"
+                CharacterSpacing="2"
+                Margin="2,5,0,0"/>
+
+            <Border
+                BackgroundColor="#181A21"
+                Stroke="#2E303A"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 18"
+                Padding="16">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Height -->
+
+                    <VerticalStackLayout Spacing="6">
+
+                        <Grid
+                            ColumnDefinitions="*,Auto">
+
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="ส่วนสูง"
+                                    TextColor="#E7E7EA"
+                                    FontSize="16"/>
+
+                                <Label
+                                    Text="Height"
+                                    TextColor="#777A88"
+                                    FontSize="11"/>
+                            </VerticalStackLayout>
+
+                            <Label
+                                x:Name="HeightLabel"
+                                Text="170 cm"
+                                TextColor="#C9A7FF"
+                                FontSize="16"
+                                VerticalOptions="Center"/>
+
+                        </Grid>
+
+                        <Slider
+                            x:Name="HeightSlider"
+                            Minimum="150"
+                            Maximum="200"
+                            Value="170"
+                            ThumbColor="#C9A7FF"
+                            MinimumTrackColor="#C9A7FF"
+                            MaximumTrackColor="#353743"
+                            ValueChanged="HeightSlider_ValueChanged"/>
+
+                    </VerticalStackLayout>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Personality -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="นิสัย"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Personality"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="PersonalityPicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ร่าเริง</x:String>
+                                <x:String>เย็นชา</x:String>
+                                <x:String>ใจดี</x:String>
+                                <x:String>ขี้อาย</x:String>
+                                <x:String>กล้าหาญ</x:String>
+                                <x:String>เจ้าเล่ห์</x:String>
+                                <x:String>จริงจัง</x:String>
+                                <x:String>ขี้เล่น</x:String>
+                                <x:String>หัวร้อน</x:String>
+                                <x:String>เงียบขรึม</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Outfit -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="ชุด"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Outfit"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="OutfitPicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ชุดนักรบ</x:String>
+                                <x:String>ชุดอัศวิน</x:String>
+                                <x:String>ชุดนักเวท</x:String>
+                                <x:String>ชุดนักบวช</x:String>
+                                <x:String>ชุดโจร</x:String>
+                                <x:String>ชุดขุนนาง</x:String>
+                                <x:String>ชุดนักผจญภัย</x:String>
+                                <x:String>ชุดเกราะดำ</x:String>
+                                <x:String>ชุดแฟนตาซี</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#292B34"/>
+
+
+                    <!-- Accessory -->
+
+                    <Grid
+                        ColumnDefinitions="*,Auto">
+
+                        <VerticalStackLayout>
+                            <Label
+                                Text="เครื่องประดับ"
+                                TextColor="#E7E7EA"
+                                FontSize="16"/>
+
+                            <Label
+                                Text="Accessory"
+                                TextColor="#777A88"
+                                FontSize="11"/>
+                        </VerticalStackLayout>
+
+                        <Picker
+                            x:Name="AccessoryPicker"
+                            Grid.Column="1"
+                            WidthRequest="130"
+                            TextColor="#C9A7FF"
+                            HorizontalTextAlignment="End">
+
+                            <Picker.Items>
+                                <x:String>ไม่มี</x:String>
+                                <x:String>ต่างหู</x:String>
+                                <x:String>สร้อยคอ</x:String>
+                                <x:String>แหวน</x:String>
+                                <x:String>กำไล</x:String>
+                                <x:String>ผ้าคลุม</x:String>
+                                <x:String>หน้ากาก</x:String>
+                                <x:String>มงกุฎ</x:String>
+                                <x:String>เข็มกลัด</x:String>
+                                <x:String>เครื่องประดับเวทมนตร์</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <!-- RANDOM BUTTON -->
+
+            <Button
+                Text="✦  สุ่มรูปลักษณ์ทั้งหมด"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="#101116"
+                BackgroundColor="#C9A7FF"
+                CornerRadius="16"
+                HeightRequest="60"
+                Margin="0,5,0,20"
+                Clicked="RandomAppearance_Clicked"/>
+
         </VerticalStackLayout>
+
     </ScrollView>
+
 </ContentPage>
