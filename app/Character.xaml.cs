@@ -1,4 +1,3 @@
-
 namespace app;
 
 public partial class Character : ContentPage

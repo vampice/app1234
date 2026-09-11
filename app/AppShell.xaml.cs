@@ -6,12 +6,13 @@
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
+            Routing.RegisterRoute(nameof(Character), typeof(Character));
         }
 
         private async void OnHomeClicked(object? sender, EventArgs e)
         {
             FlyoutIsPresented = false;
-            await GoToAsync(nameof(MainPage));
+            await GoToAsync("//MainPage");
         }
 
         private async void OnAboutClicked(object? sender, EventArgs e)
