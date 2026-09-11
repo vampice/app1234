@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.MainPage"
+             Title="Random Color">
+  <ScrollView>
+    <VerticalStackLayout Padding="20" Spacing="18">
+
+      <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+
+        <Grid x:Name="SwatchesGrid"
+              RowSpacing="0"
+              VerticalOptions="Fill"
+              HeightRequest="600"
+              Margin="-10,0,-10,0">
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+
+          <Border Grid.Row="0" Padding="0" BackgroundColor="Transparent">
+            <Grid>
+              <BoxView x:Name="Swatch1" WidthRequest="400" HeightRequest="400" Color="Transparent" />
+              <Label x:Name="Swatch1Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+            </Grid>
+            <Border.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch1}" />
+            </Border.GestureRecognizers>
+          </Border>
+
+          <Border Grid.Row="1" Padding="0" BackgroundColor="Transparent">
+            <Grid>
+              <BoxView x:Name="Swatch2" HorizontalOptions="Fill" VerticalOptions="Fill" Color="#FF89FF84" />
+              <Label x:Name="Swatch2Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+            </Grid>
+            <Border.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch2}" />
+            </Border.GestureRecognizers>
+          </Border>
+
+          <Border Grid.Row="2" Padding="0" BackgroundColor="Transparent">
+            <Grid>
+              <BoxView x:Name="Swatch3" HorizontalOptions="Fill" VerticalOptions="Fill" Color="#FF84FFFA" />
+              <Label x:Name="Swatch3Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+            </Grid>
+            <Border.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch3}" />
+            </Border.GestureRecognizers>
+          </Border>
+
+          <Border Grid.Row="3" Padding="0" StrokeThickness="0" BackgroundColor="Transparent">
+            <Grid>
+              <BoxView x:Name="Swatch4" HorizontalOptions="Fill" VerticalOptions="Fill" Color="Transparent" />
+              <Label x:Name="Swatch4Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+            </Grid>
+            <Border.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch4}" />
+            </Border.GestureRecognizers>
+          </Border>
+
+          <Border Grid.Row="4" Padding="0" StrokeThickness="0" BackgroundColor="Transparent">
+            <Grid>
+              <BoxView x:Name="Swatch5" HorizontalOptions="Fill" VerticalOptions="Fill" Color="#FFB084FF" />
+              <Label x:Name="Swatch5Label" Text="" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+            </Grid>
+            <Border.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnSwatchTapped" CommandParameter="{x:Reference Swatch5}" />
+            </Border.GestureRecognizers>
+          </Border>
+
+        </Grid>
+
+        <!-- Selected hex display -->
+        <Label x:Name="SelectedHex" Text="" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,10,0,0" />
+
+        <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+          <Button x:Name="RandomizeBtn" Text="Random" Clicked="OnRandomizeClicked" />
+        </HorizontalStackLayout>
+
+      </VerticalStackLayout>
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>
