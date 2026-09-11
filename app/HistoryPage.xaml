@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.HistoryPage"
+             Title="History">
+    <Grid Padding="16" RowDefinitions="Auto,*" RowSpacing="12">
+        <Grid ColumnDefinitions="*,Auto">
+            <Label Text="Palette History"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center" />
+            <Button Grid.Column="1"
+                    Text="Clear"
+                    Clicked="OnClearClicked"
+                    IsVisible="False"
+                    x:Name="ClearButton" />
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout x:Name="HistoryLayout" Spacing="8">
+                <Label x:Name="EmptyLabel"
+                       Text="No palettes yet. Generate one from Home."
+                       HorizontalOptions="Center"
+                       Margin="0,24,0,0" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

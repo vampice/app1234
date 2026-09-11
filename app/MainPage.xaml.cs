@@ -61,7 +61,6 @@ namespace app
                     (Swatch4, Swatch4Label),
                     (Swatch5, Swatch5Label)
                 };
-
             foreach (var (box, label) in swatches)
             {
                 // สุ่ม RGB
@@ -79,6 +78,19 @@ namespace app
             }
         }
 
+        private void OnSaveToHistoryClicked(object? sender, EventArgs e)
+        {
+            PaletteHistory.Current.Add(
+                new[]
+                {
+                    ColorToHex(Swatch1.Color),
+                    ColorToHex(Swatch2.Color),
+                    ColorToHex(Swatch3.Color),
+                    ColorToHex(Swatch4.Color),
+                    ColorToHex(Swatch5.Color)
+                });
+        }
+
         // แสดง HEX ตรงกลางช่องสี
         private void UpdateSwatchLabel(BoxView box, Label label)
         {
@@ -86,9 +98,7 @@ namespace app
             int g = (int)(box.Color.Green * 255);
             int b = (int)(box.Color.Blue * 255);
 
-            string hex = $"#{r:X2}{g:X2}{b:X2}";
-
-            label.Text = hex;
+            label.Text = ColorToHex(box.Color);
 
             // เปลี่ยนสีตัวหนังสือให้มองเห็นง่าย
             double brightness =
@@ -105,7 +115,16 @@ namespace app
                 label.TextColor = Colors.White;
             }
         }
+
+        private static string ColorToHex(Color color)
+        {
+            int r = (int)(color.Red * 255);
+            int g = (int)(color.Green * 255);
+            int b = (int)(color.Blue * 255);
+
+            return $"#{r:X2}{g:X2}{b:X2}";
+        }
     }
 }
 
-
+//hello

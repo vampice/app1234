@@ -79,6 +79,7 @@
 
         <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
           <Button x:Name="RandomizeBtn" Text="Random" Clicked="OnRandomizeClicked" />
+          <Button x:Name="SaveButton" Text="Save to History" Clicked="OnSaveToHistoryClicked" />
         </HorizontalStackLayout>
 
       </VerticalStackLayout>

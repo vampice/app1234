@@ -7,12 +7,17 @@
     Title="app"
     FlyoutBehavior="Flyout">
 
-    <FlyoutItem Title="Home">
+    <TabBar Title="Color Tools">
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
-    </FlyoutItem>
+
+        <ShellContent
+            Title="History"
+            ContentTemplate="{DataTemplate local:HistoryPage}"
+            Route="HistoryPage" />
+    </TabBar>
 
     <FlyoutItem Title="About">
         <ShellContent
