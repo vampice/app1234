@@ -1,8 +1,6 @@
-using app;
+namespace app;
 
-namespace CharacterRandomizer;
-
-public partial class AppearancePage : AboutPage
+public partial class AboutPage : ContentPage
 {
     private readonly Random random = new();
 
@@ -93,6 +91,7 @@ public partial class AppearancePage : AboutPage
     public AboutPage()
     {
         InitializeComponent();
+
 
         // ค่าเริ่มต้น
         GenderPicker.SelectedIndex = 0;
